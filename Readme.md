@@ -1,6 +1,13 @@
 Viddyoze Acme Widget Co test
 ============================
 
+TL; DR
+===========
+* run ```script/test``` for unit tests
+* check ```test/integration/ResultsTest.php``` to see how to instantiate and run
+the code
+
+
 Assumptions
 ===========
 I'm assuming the test will be assessed on a Unix type of system, like Linux or
@@ -105,7 +112,7 @@ Unit tests can be executed by running ```script/test``` from the command line.
 
 This will run linting tests as well as unit tests.
 
-The file ```test\integration\ResultsTest``` implements tests to assert the
+The file ```test/integration/ResultsTest.php``` implements tests to assert the
 expected results mentioned in the test.
 
 If not making use of STRTA scripts, then running ```./vendor/bin/phpunit  -c ./test/phpunit.xml ./test``` from the project root should do the trick.
