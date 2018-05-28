@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  app:
+    build: .
+    image: viddyoze/test
+    ports:
+      - "8083:80"
+    # volumes:
+      # - ./code/src:/code/src
+      # - ./code/test:/code/test
+      # - ./code/vendor:/code/vendor
+      # - ./code/composer.lock:/code/composer.lock

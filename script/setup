@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+[ -z "${DEBUG}" ] || set -x
+
+BASEDIR="$(dirname "$0")/.."
+cd "${BASEDIR}"
+
+script/bootstrap

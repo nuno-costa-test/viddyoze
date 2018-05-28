@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e
+[ -z "${DEBUG}" ] || set -x
+
+BASEDIR="$(dirname "$0")/.."
+cd "${BASEDIR}"
+
+script/update
+
+
+echo "==> Running tests..."
+
+echo "    ==> running coding style checks"
+docker run -it viddyoze/test /code/vendor/bin/phpcs -v --standard=PSR2 /code/src
+
+echo -e "\n    ==> running unit tests"
+docker run -it viddyoze/test /code/vendor/bin/phpunit  -c /code/test/phpunit.xml /code/test
