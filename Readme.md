@@ -7,7 +7,7 @@ I'm assuming the test will be assessed on a Unix type of system, like Linux or
 OSX as such all the utilitarian scripts are based on that Assumptions but the
 tests and application can be executed on any environment that supports PHP.
 
-As a rule I employ gihub's [STRTA](https://github.com/github/scripts-to-rule-them-all)
+As a rule, I employ gihub's [STRTA](https://github.com/github/scripts-to-rule-them-all)
 pattern and provided a set of universal scripts so that any developer familiar
 with the pattern can "hit the ground running".
 
@@ -36,8 +36,8 @@ iterations, so the performance impact will be negligible, furthermore the system
 
 Run it
 =================
-_The file ```test\integration\ResultsTest``` provides a good example of how to_
-instantiate and execute the different elements of the codebase.
+_As usual unit tests provide the best form of interface documentation. The file ```test\integration\ResultsTest``` provides a good example of how to instantiate
+ and execute the different elements of the codebase._
 
 To compute a price the code expects 3 things:
 1. Catalogue of products.
@@ -86,7 +86,7 @@ Because they define business logic, some Rule Executors/Iterators implement
 simple logic, like for example only one rule of the set will apply. This is used
 for computing the shipping costs.
 
-Finally it is time to compute the total price
+Finally, it is time to compute the total price
 
 ```php
 $cart->addToCart('B01');
@@ -108,4 +108,4 @@ This will run linting tests as well as unit tests.
 The file ```test\integration\ResultsTest``` implements tests to assert the
 expected results mentioned in the test.
 
-If not making use of STRTA scripts then running ```./vendor/bin/phpunit  -c ./test/phpunit.xml ./test``` from the project root should do the trick.
+If not making use of STRTA scripts, then running ```./vendor/bin/phpunit  -c ./test/phpunit.xml ./test``` from the project root should do the trick.

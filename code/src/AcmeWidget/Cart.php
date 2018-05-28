@@ -48,6 +48,11 @@ class Cart
         return $this->products;
     }
 
+    /**
+     * add a product the the shopping cart, by product code
+     * @param  string $code
+     * @return bool
+     */
     public function addToCart(string $code) : bool
     {
         $product = $this->getProduct($code);
@@ -60,6 +65,11 @@ class Cart
         return true;
     }
 
+    /**
+     * go throught the defined rules and process them one by one
+     * @param  array $products the products in the cart
+     * @return array           the modified list of profucts
+     */
     private function applyRules(array $products) : array
     {
         foreach ($this->rules as $rule) {
@@ -72,9 +82,12 @@ class Cart
         return $products;
     }
 
+    /**
+     * Computes the total cart price
+     * @return int
+     */
     public function computeTotal() : int
     {
-        // $tmpProducts = $this->getProducts();
         $tmpProducts = $this->applyRules($this->getProducts());
 
         $total = array_reduce($tmpProducts, function ($subTotal, $product) {

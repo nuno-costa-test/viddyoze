@@ -3,6 +3,11 @@ namespace AcmeWidget\Rules;
 
 use AcmeWidget\Rules\RuleInterface;
 
+
+/**
+ * base actions useful for all Rules
+ * @var [type]
+ */
 abstract class AbstractRule implements RuleInterface
 {
     /**

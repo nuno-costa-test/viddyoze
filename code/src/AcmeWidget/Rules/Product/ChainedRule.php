@@ -5,7 +5,7 @@ use AcmeWidget\Product\ProductInterface;
 
 /**
  * this will run all rules assigned to it one by one until one returns a non
- * null result§
+ * null result
  */
 class ChainedRule extends AbstractProductRule
 {
