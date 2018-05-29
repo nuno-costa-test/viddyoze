@@ -14,7 +14,7 @@ I'm assuming the test will be assessed on a Unix type of system, like Linux or
 OSX as such all the utilitarian scripts are based on that Assumptions but the
 tests and application can be executed on any environment that supports PHP.
 
-As a rule, I employ gihub's [STRTA](https://github.com/github/scripts-to-rule-them-all)
+As a rule, I employ github's [STRTA](https://github.com/github/scripts-to-rule-them-all)
 pattern and provided a set of universal scripts so that any developer familiar
 with the pattern can "hit the ground running".
 
@@ -24,8 +24,8 @@ and no code coverage report is generated
 
 Design decisions
 ================
-Regarding the Rules types I've opted for a simple model, consideration was given
-to having rules that apply to the cart items and Rules that apply to cart total price.
+Regarding the rules types I've opted for a simple model, consideration was given
+to having rules that apply to the cart items and rules that apply to cart total price.
 
 I've opted out for the simple model, where we have a single rule type that applies
 to all items in chart, the drawback is that shipping cost rules will have to
@@ -43,7 +43,7 @@ iterations, so the performance impact will be negligible, furthermore the system
 
 Run it
 =================
-_As usual unit tests provide the best form of interface documentation. The file ```test\integration\ResultsTest``` provides a good example of how to instantiate
+_As usual, unit tests, provide the best form of interface documentation. The file ```test\integration\ResultsTest.php``` provides a good example of how to instantiate
  and execute the different elements of the codebase._
 
 To compute a price the code expects 3 things:
@@ -66,7 +66,7 @@ $cart->addCatalogItem(new Widget('Green Widget', 'G01', 2495));
 $cart->addCatalogItem(new Widget('Blue Widget', 'B01', 795));
 ```
 
-After having the catalogue are going to add some Promotions
+After the catalogue is in place, we have the option to add promotions/discounts
 
 ```php
 use AcmeWidget\Rules\Product\NthItemDiscount;
